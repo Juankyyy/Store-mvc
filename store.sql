@@ -11,6 +11,7 @@ CREATE TABLE Users (
 );
 
 SELECT * FROM Users;
+SELECT * FROM Products;
 
 INSERT INTO Users (Names, LastNames, Email, BirthDate, Address, Phone)
 VALUES ("Juanky", "Herrera", "juanky@gmail.com", "2005-02-03", "Calle 33 #33D-33", "3177943448");
@@ -27,4 +28,7 @@ CREATE TABLE Products (
 );
 
 INSERT INTO Products (Name, Description, Price, Amount, ExpirationDate)
-VALUES ("Gansito", "La diversión hecha sabor", 1700.00, 1, "2004-05-06");   
+VALUES ("Gansito", "La diversión hecha sabor", 1700.00, 1, "2004-05-06");
+
+INSERT INTO Products (Name, Description, Price, Amount, ExpirationDate)
+VALUES ("Gansito", "La diversión hecha sabor", 1700.00, 1, "2004-05-06");
