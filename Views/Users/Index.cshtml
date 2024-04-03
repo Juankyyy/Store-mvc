@@ -32,8 +32,8 @@
                     <td>@user.Phone</td>
                     <td>
                         <a class="btn btn-sm btn-info" asp-route-id="@user.Id" asp-controller="Users" asp-action="Details">Detalles</a>
-                        <a class="btn btn-sm btn-warning" asp-area="" asp-controller="Users" asp-action="Details">Editar</a>
-                        <a class="btn btn-sm btn-danger" asp-area="" asp-controller="Users" asp-action="Details">Eliminar</a>
+                        <a class="btn btn-sm btn-warning" asp-route-id="@user.Id" asp-controller="Users" asp-action="Edit">Editar</a>
+                        <a class="btn btn-sm btn-danger" asp-route-id="@user.Id" asp-controller="Users" asp-action="Delete">Eliminar</a>
                     </td>
                 </tr>
             }

@@ -22,5 +22,10 @@ namespace Store_mvc.Controllers
         {
             return View(await _context.Products.FirstOrDefaultAsync(m => m.Id == id));
         }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            return View(await _context.Products.FirstOrDefaultAsync(m => m.Id == id));
+        }
     }
 }

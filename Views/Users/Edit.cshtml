@@ -1,0 +1,40 @@
+@{
+    ViewBag.Title = "Editar Usuario";
+    ViewBag.Favicon = "usuarios.svg";
+}
+
+<section class="container">
+    <form class="form cardDetails">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombres:</label>
+            <input type="text" class="form-control" id="name" autofocus value="@Model.Names">
+        </div>
+
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Apellidos:</label>
+            <input type="text" class="form-control" id="lastname" value="@Model.LastNames">
+        </div>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo:</label>
+            <input type="email" class="form-control" id="email" value="@Model.Email">
+        </div>
+
+        <div class="mb-3">
+            <label for="birthdate" class="form-label">Cumpleaños:</label>
+            <input type="text" class="form-control" id="birthdate" value="@Model.BirthDate">
+        </div>
+
+        <div class="mb-3 m-auto">
+            <label for="address" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="address" value="@Model.Address">
+        </div>
+
+        <div class="mb-3 m-auto">
+            <label for="phone" class="form-label">Teléfono:</label>
+            <input type="number" class="form-control" id="phone" value="@Model.Phone">
+        </div>
+    </form>
+
+    <a class="btn btn-success mt-3" asp-route-id="@Model.Id" asp-controller="Users" asp-action="Index">Confirmar</a>
+</section>

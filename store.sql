@@ -31,5 +31,7 @@ CREATE TABLE Products (
 );
 
 INSERT INTO Products (Name, Description, Price, Amount, ExpirationDate)
-VALUES ("Gansito", "La diversión hecha sabor", 1700.00, 1, "2004-05-06"),
-("Gansito", "La diversión hecha sabor", 1700.00, 1, "2004-05-06")
+VALUES ("Gansito", "Pequeño pastelito relleno de crema que tiene cobertura de chocolate ", 1700.00, 1, "2024-05-06"),
+("Papitas BBQ Kythos", "Papas fritas sabor BBQ KYTHOS 115 Gramos", 3290.00, 1, "2024-04-30"),
+("Flips Chocolate", "Almohadas de cereal a base de arroz, trigo y avena sabor a Chocolate.", 14150.00, 1, "2024-07-16"),
+("Tocineta Mega Piggins", "Pasabocas a Base de Harina de Trigo con Tocineta", 1950.00, 1, "2024-05-01"),
