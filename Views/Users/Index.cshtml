@@ -1,0 +1,41 @@
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<div class="container">
+    <h2>Usuarios</h2>
+
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Correo</td>
+                <td>Cumpleaños</td>
+                <td>Dirección</td>
+                <td>Teléfono</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Names</td>
+                    <td>@user.LastNames</td>
+                    <td>@user.Email</td>
+                    <td>@user.BirthDate</td>
+                    <td>@user.Address</td>
+                    <td>@user.Phone</td>
+                    <td>
+                        <a class="btn btn-sm btn-info" asp-area="" asp-controller="Users" asp-action="Details">Detalles</a>
+                        <a class="btn btn-sm btn-warning" asp-area="" asp-controller="Users" asp-action="Details">Editar</a>
+                        <a class="btn btn-sm btn-danger" asp-area="" asp-controller="Users" asp-action="Details">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
