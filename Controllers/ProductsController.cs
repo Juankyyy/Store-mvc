@@ -17,5 +17,10 @@ namespace Store_mvc.Controllers
         {
             return View(await _context.Products.ToListAsync());
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            return View(await _context.Products.FirstOrDefaultAsync(m => m.Id == id));
+        }
     }
 }

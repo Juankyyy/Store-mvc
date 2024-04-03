@@ -31,7 +31,7 @@
                     <td>@user.Address</td>
                     <td>@user.Phone</td>
                     <td>
-                        <a class="btn btn-sm btn-info" asp-area="" asp-controller="Users" asp-action="Details">Detalles</a>
+                        <a class="btn btn-sm btn-info" asp-route-id="@user.Id" asp-controller="Users" asp-action="Details">Detalles</a>
                         <a class="btn btn-sm btn-warning" asp-area="" asp-controller="Users" asp-action="Details">Editar</a>
                         <a class="btn btn-sm btn-danger" asp-area="" asp-controller="Users" asp-action="Details">Eliminar</a>
                     </td>

@@ -1,0 +1,21 @@
+
+@{
+    ViewBag.Title = "Detalles del Usuario";
+    ViewBag.Favicon = "usuarios.svg";
+}
+
+<div class="container">
+    <h2>Detalles del usuario: @Model.Names</h2>
+
+    <div class="cardDetails mt-5">
+        <p><strong>ID: </strong>@Model.Id</p>
+        <p><strong>Nombres: </strong>@Model.Names</p>
+        <p><strong>Apellidos: </strong>@Model.LastNames</p>
+        <p><strong>Correo: </strong>@Model.Email</p>
+        <p><strong>Cumpleaños: </strong>@Model.BirthDate</p>
+        <p><strong>Dirección: </strong>@Model.Address</p>
+        <p><strong>Teléfono: </strong>@Model.Phone</p>
+    </div>
+
+    <a class="btn btn-primary mt-3" asp-controller="Users" asp-action="Index">Volver</a>
+</div>

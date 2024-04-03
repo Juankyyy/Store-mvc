@@ -29,8 +29,8 @@
                     <td>@product.Amount</td>
                     <td>@product.ExpirationDate</td>
                     <td>
-                        <a class="btn btn-sm btn-info" asp-area="" asp-controller="Products" asp-action="Details">Detalles</a>
-                        <a class="btn btn-sm btn-warning" asp-area="" asp-controller="Products" asp-action="Edit">Editar</a>
+                        <a class="btn btn-sm btn-info" asp-route-id="@product.Id" asp-controller="Products" asp-action="Details">Detalles</a>
+                        <a class="btn btn-sm btn-warning"  asp-controller="Products" asp-action="Edit">Editar</a>
                         <a class="btn btn-sm btn-danger" asp-area="" asp-controller="Products" asp-action="Delete">Eliminar</a>
                     </td>
                 </tr>

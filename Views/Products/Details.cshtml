@@ -1,0 +1,20 @@
+
+@{
+    ViewBag.Title = "Detalles del Producto";
+    ViewBag.Favicon = "productos.svg";
+}
+
+<div class="container">
+    <h2>Detalles del producto: @Model.Name</h2>
+
+    <div class="cardDetails mt-5">
+        <p><strong>ID: </strong>@Model.Id</p>
+        <p><strong>Nombres: </strong>@Model.Name</p>
+        <p><strong>Descripción: </strong>@Model.Description</p>
+        <p><strong>Precio: </strong>@Model.Price</p>
+        <p><strong>Cantidad: </strong>@Model.Amount</p>
+        <p><strong>Fecha de Vencimiento: </strong>@Model.ExpirationDate</p>
+    </div>
+
+    <a class="btn btn-primary mt-3" asp-controller="Products" asp-action="Index">Volver</a>
+</div>
