@@ -1,0 +1,46 @@
+@model User
+@{
+    ViewBag.Title = "Crear Nuevo Usuario";
+    ViewBag.Favicon = "usuarios.svg";
+}
+
+<section class="content">
+    <h2 class="mb-5">Crear Nuevo Usuario</h2>
+
+    <form class="form" asp-action="Create" method="post">
+        <div class="cardEdit">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombres:</label>
+                <input type="text" class="form-control" id="name" autofocus asp-for="Names">
+            </div>
+
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Apellidos:</label>
+                <input type="text" class="form-control" id="lastname" asp-for="LastNames">
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo:</label>
+                <input type="email" class="form-control" id="email" asp-for="Email">
+            </div>
+
+            <div class="mb-3">
+                <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
+                <input type="date" max="2024-01-01" class="form-control" id="birthdate" asp-for="BirthDate">
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Dirección:</label>
+                <input type="text" class="form-control" id="address" asp-for="Address">
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Teléfono:</label>
+                <input type="number" class="form-control" id="phone" asp-for="Phone">
+            </div>
+        </div>
+
+    <button class="btn btn-success mt-3">Crear</button>
+    </form>
+
+</section>
