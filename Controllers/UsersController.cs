@@ -18,9 +18,18 @@ namespace Store_mvc.Controllers
             return View(await _context.Users.ToListAsync());
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Create(User u)
+        {
+            _context.Users.Add(u);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Details(int? id)
