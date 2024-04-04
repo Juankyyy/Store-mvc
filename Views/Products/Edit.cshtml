@@ -6,7 +6,7 @@
 <section class="content">
     <h2 class="mb-5">Editar Producto: @Model.Name</h2>
 
-    <form class="form">
+    <form class="form" asp-action="Create" method="post">
         <div class="cardEdit cardEditProduct">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre del producto:</label>
@@ -33,7 +33,7 @@
                 <input type="text" class="form-control w-100" id="description" value="@Model.Description">
             </div>
         </div>
-    </form>
 
-    <a class="btn btn-success mt-3" asp-route-id="@Model.Id" asp-controller="Products" asp-action="Index">Confirmar</a>
+        <button class="btn btn-success mt-3">Actualizar</button>
+    </form>
 </section>

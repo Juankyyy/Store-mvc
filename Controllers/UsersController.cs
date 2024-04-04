@@ -49,5 +49,14 @@ namespace Store_mvc.Controllers
         {
             return View(await _context.Users.FirstOrDefaultAsync(m => m.Id == id));
         }
+
+        // [HttpPut]
+        // public async Task<IActionResult> Edit(int? id)
+        // {
+        //     var user = await _context.Users.FindAsync(id);
+        //     _context.Users.Update(id);
+        //     _context.SaveChangesAsync();
+        //     return RedirectToAction("Index");
+        // }
     }
 }
