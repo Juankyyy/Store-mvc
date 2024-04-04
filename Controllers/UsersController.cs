@@ -18,6 +18,11 @@ namespace Store_mvc.Controllers
             return View(await _context.Users.ToListAsync());
         }
 
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Details(int? id)
         {
             return View(await _context.Users.FirstOrDefaultAsync(m => m.Id == id));
