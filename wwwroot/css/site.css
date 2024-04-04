@@ -43,6 +43,10 @@
   width: 700px;
 }
 
+.cardEditProduct {
+  width: 900px;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;

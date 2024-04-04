@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Store_mvc.Data;
+using Store_mvc.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Store_mvc.Controllers
@@ -28,13 +29,20 @@ namespace Store_mvc.Controllers
         {
             _context.Users.Add(u);
             _context.SaveChanges();
-
             return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Details(int? id)
         {
             return View(await _context.Users.FirstOrDefaultAsync(m => m.Id == id));
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Edit(int? id)

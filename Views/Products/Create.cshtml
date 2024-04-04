@@ -1,39 +1,41 @@
+@model Product
 @{
-    ViewBag.Title = "Editar Producto";
+    ViewBag.Title = "Crear Nuevo Producto";
     ViewBag.Favicon = "productos.svg";
 }
 
 <section class="content">
-    <h2 class="mb-5">Editar Producto: @Model.Name</h2>
+    <h2 class="mb-5">Crear Nuevo Producto</h2>
 
-    <form class="form">
+    <form class="form" asp-action="Create" method="post">
         <div class="cardEdit cardEditProduct">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre del producto:</label>
-                <input type="text" class="form-control" id="name" autofocus value="@Model.Name">
-            </div>
-            
-            <div class="mb-3">
-                <label for="price" class="form-label">Precio:</label>
-                <input type="number" class="form-control" id="email" value="@Model.Price">
+                <input type="text" class="form-control" id="name" autofocus asp-for="Name">
             </div>
 
             <div class="mb-3">
+                <label for="price" class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="email" asp-for="Price">
+            </div>
+            
+            <div class="mb-3">
                 <label for="amount" class="form-label">Cantidad:</label>
-                <input type="number" class="form-control" id="amount" value="@Model.Amount">
+                <input type="number" class="form-control" id="amount" asp-for="Amount">
             </div>
 
             <div class="mb-3">
                 <label for="expiration" class="form-label">Fecha de Vencimiento:</label>
-                <input type="date" class="form-control" id="expiration" value="@Model.ExpirationDate">
+                <input type="date" class="form-control" id="expiration" asp-for="ExpirationDate">
             </div>
 
             <div class="mb-3 w-100">
                 <label for="description" class="form-label">Descripción:</label>
-                <input type="text" class="form-control w-100" id="description" value="@Model.Description">
+                <input type="text" class="form-control w-100" id="description" asp-for="Description">
             </div>
         </div>
+
+    <button class="btn btn-success mt-3">Crear</button>
     </form>
 
-    <a class="btn btn-success mt-3" asp-route-id="@Model.Id" asp-controller="Products" asp-action="Index">Confirmar</a>
 </section>

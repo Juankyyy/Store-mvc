@@ -30,11 +30,11 @@
                     <td>@product.Description</td>
                     <td>$ @product.Price</td>
                     <td>@product.Amount</td>
-                    <td>@product.ExpirationDate</td>
+                    <td>@product.ExpirationDate.ToString("yyyy-MM-dd")</td>
                     <td>
                         <a class="btn btn-sm btn-info" asp-route-id="@product.Id" asp-controller="Products" asp-action="Details">Detalles</a>
-                        <a class="btn btn-sm btn-warning" asp-route-id="@product.Id"  asp-controller="Products" asp-action="Edit">Editar</a>
-                        <a class="btn btn-sm btn-danger" asp-area="" asp-controller="Products" asp-action="Delete">Eliminar</a>
+                        <a class="btn btn-sm btn-warning" asp-route-id="@product.Id" asp-controller="Products" asp-action="Edit">Editar</a>
+                        <a class="btn btn-sm btn-danger" asp-route-id="@product.Id" asp-area="" asp-controller="Products" asp-action="Delete">Eliminar</a>
                     </td>
                 </tr>
             }
