@@ -1,3 +1,4 @@
+@model Product
 @{
     ViewBag.Title = "Editar Producto";
     ViewBag.Favicon = "productos.svg";
@@ -6,31 +7,31 @@
 <section class="content">
     <h2 class="mb-5">Editar Producto: @Model.Name</h2>
 
-    <form class="form" asp-action="Create" method="post">
+    <form class="form" asp-controller="Products" asp-action="Edit" method="post">
         <div class="cardEdit cardEditProduct">
             <div class="mb-3">
-                <label for="name" class="form-label">Nombre del producto:</label>
-                <input type="text" class="form-control" id="name" autofocus value="@Model.Name">
+                <label class="form-label">Nombre del producto:</label>
+                <input type="text" class="form-control" autofocus value="@Model.Name" asp-for="Name">
             </div>
             
             <div class="mb-3">
-                <label for="price" class="form-label">Precio:</label>
-                <input type="number" class="form-control" id="email" value="@Model.Price">
+                <label class="form-label">Precio:</label>
+                <input type="number" class="form-control" value="@Model.Price" asp-for="Price">
             </div>
 
             <div class="mb-3">
-                <label for="amount" class="form-label">Cantidad:</label>
-                <input type="number" class="form-control" id="amount" value="@Model.Amount">
+                <label class="form-label">Cantidad:</label>
+                <input type="number" class="form-control" value="@Model.Amount" asp-for="Amount">
             </div>
 
             <div class="mb-3">
-                <label for="expiration" class="form-label">Fecha de Vencimiento:</label>
-                <input type="date" class="form-control" id="expiration" value="@Model.ExpirationDate">
+                <label class="form-label">Fecha de Vencimiento:</label>
+                <input type="date" class="form-control" value="@Model.ExpirationDate" asp-for="ExpirationDate">
             </div>
 
             <div class="mb-3 w-100">
-                <label for="description" class="form-label">Descripción:</label>
-                <input type="text" class="form-control w-100" id="description" value="@Model.Description">
+                <label class="form-label">Descripción:</label>
+                <input type="text" class="form-control w-100" value="@Model.Description" asp-for="Description">
             </div>
         </div>
 

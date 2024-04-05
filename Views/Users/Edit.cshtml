@@ -11,32 +11,32 @@
         <div class="cardEdit">
             <div class="mb-3">
                 <label class="form-label">Nombres:</label>
-                <input type="text" class="form-control"  autofocus value="@Model.Names" asp-for="Names">
+                <input type="text" class="form-control"  autofocus asp-for="Names">
             </div>
 
             <div class="mb-3">
                 <label  class="form-label">Apellidos:</label>
-                <input type="text" class="form-control" value="@Model.LastNames" asp-for="LastNames">
+                <input type="text" class="form-control" asp-for="LastNames">
             </div>
             
             <div class="mb-3">
                 <label class="form-label">Correo:</label>
-                <input type="email" class="form-control" value="@Model.Email" asp-for="Email">
+                <input type="email" class="form-control" asp-for="Email">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Fecha de Nacimiento:</label>
-                <input type="date" class="form-control" value="@Model.BirthDate.ToString("yyyy-MM-dd")" asp-for="BirthDate">
+                <input type="date" class="form-control" asp-for="BirthDate">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Dirección:</label>
-                <input type="text" class="form-control" value="@Model.Address" asp-for="Address">
+                <input type="text" class="form-control" asp-for="Address">
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Teléfono:</label>
-                <input type="number" class="form-control" value="@Model.Phone" asp-for="Phone">
+                <input type="number" class="form-control" asp-for="Phone">
             </div>
         </div>
 

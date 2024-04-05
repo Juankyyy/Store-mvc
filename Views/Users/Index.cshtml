@@ -4,9 +4,14 @@
 }
 
 <div class="container">
-    <div class="menu">
-        <h2>Usuarios</h2>
-        <a class="btn btn-success mb-3" asp-controller="Users" asp-action="Create">Crear Usuario</a>
+    <h2>Usuarios</h2>
+
+    <div class="menu mb-3">
+        <div class="search">
+            <input class="form-control" type="text" placeholder="Pedrito">
+            <button class="btn btn-primary" asp-controller="Users" asp-action="Search">Buscar</button>
+        </div>
+        <a class="btn btn-success" asp-controller="Users" asp-action="Create">Crear Usuario</a>
     </div>
 
     <table class="table table-dark table-striped table-hover">

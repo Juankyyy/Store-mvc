@@ -48,5 +48,13 @@ namespace Store_mvc.Controllers
         {
             return View(await _context.Products.FirstOrDefaultAsync(m => m.Id == id));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Product p)
+        {
+            _context.Products.Update(p);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }
