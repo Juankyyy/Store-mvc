@@ -1,3 +1,4 @@
+@model User
 @{
     ViewBag.Title = "Editar Usuario";
     ViewBag.Favicon = "usuarios.svg";
@@ -6,36 +7,36 @@
 <section class="content">
     <h2 class="mb-5">Editar Usuario: @Model.Names</h2>
 
-    <form class="form">
+    <form class="form" asp-controller="Users" asp-action="Edit" asp-route-id="@Model.Id" method="post">
         <div class="cardEdit">
             <div class="mb-3">
-                <label for="name" class="form-label">Nombres:</label>
-                <input type="text" class="form-control" id="name" autofocus value="@Model.Names">
+                <label class="form-label">Nombres:</label>
+                <input type="text" class="form-control"  autofocus value="@Model.Names" asp-for="Names">
             </div>
 
             <div class="mb-3">
-                <label for="lastname" class="form-label">Apellidos:</label>
-                <input type="text" class="form-control" id="lastname" value="@Model.LastNames">
+                <label  class="form-label">Apellidos:</label>
+                <input type="text" class="form-control" value="@Model.LastNames" asp-for="LastNames">
             </div>
             
             <div class="mb-3">
-                <label for="email" class="form-label">Correo:</label>
-                <input type="email" class="form-control" id="email" value="@Model.Email">
+                <label class="form-label">Correo:</label>
+                <input type="email" class="form-control" value="@Model.Email" asp-for="Email">
             </div>
 
             <div class="mb-3">
-                <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
-                <input type="date" class="form-control" id="birthdate" value="@Model.BirthDate">
+                <label class="form-label">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" value="@Model.BirthDate.ToString("yyyy-MM-dd")" asp-for="BirthDate">
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">Dirección:</label>
-                <input type="text" class="form-control" id="address" value="@Model.Address">
+                <label class="form-label">Dirección:</label>
+                <input type="text" class="form-control" value="@Model.Address" asp-for="Address">
             </div>
 
             <div class="mb-3">
-                <label for="phone" class="form-label">Teléfono:</label>
-                <input type="number" class="form-control" id="phone" value="@Model.Phone">
+                <label class="form-label">Teléfono:</label>
+                <input type="number" class="form-control" value="@Model.Phone" asp-for="Phone">
             </div>
         </div>
 
