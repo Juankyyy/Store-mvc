@@ -58,6 +58,16 @@ namespace Store_mvc.Controllers
             return RedirectToAction("Index");
         }
 
-        
+        public IActionResult Search(string search)
+        {
+            var users = _context.Users.AsQueryable();
+
+            if(!string.IsNullOrEmpty(search))
+            {
+                users = users.Where(u => u.Names.Equals(search));
+            }
+
+            return View(users.ToListAsync());
+        }
     }
 }
